@@ -65,6 +65,7 @@ public class Stabilizer : MonoBehaviour
     public void AttachToNeedle()
     {
         _isAttached = true;
+        blockBone();
     }
 
     public void DisableGravity()

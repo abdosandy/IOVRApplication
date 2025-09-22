@@ -19,6 +19,7 @@ public class StabilizerSnappingOnNeedle : MonoBehaviour
 
     [SerializeField] private Transform _stabilizer;
     [SerializeField] private Transform _snapZone;
+    [SerializeField] private Transform stickerState;
 
     void Start()
     {
@@ -42,7 +43,7 @@ public class StabilizerSnappingOnNeedle : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if( other.gameObject.tag == "Stabilizer" && _stabilizer.GetComponent<RemoveAdhesive_State>()._remouveSticker)
+        if( other.gameObject.tag == "Stabilizer" && stickerState.GetComponent<RemoveAdhesive_State>()._remouveSticker)
         {
             // Disable gravity for stickers to avoid bugs when colliding with the leg
             _stabilizer.GetComponent<Stabilizer>().DisableGravity();
