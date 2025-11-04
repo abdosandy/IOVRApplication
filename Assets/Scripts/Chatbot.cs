@@ -59,7 +59,7 @@ namespace Meta.WitAi.TTS.Samples
     
         private OpenAIApi openai = new OpenAIApi();
         private DateTime startTime;
-        private string gptModel = "gpt-4o-mini";
+        private string gptModel = "gpt-4o";
         //private string gptModel = "ft:gpt-4o-mini-2024-07-18:personal:io-eleventh-experiment:ATsVMVr6";
         //private string gptModel = "ft:gpt-4o-mini-2024-07-18:personal:io-tenth-experiment:ANtYAzny";
 
