@@ -30,6 +30,10 @@ public class TasksManager : MonoBehaviour
     [SerializeField] private Questionnaire questionnaire;
     [SerializeField] private GameObject _menuCanva;
 
+    [SerializeField] private EyeTrackingRenderer _sguardosinistroAvatar;
+    [SerializeField] private EyeTrackingRenderer _sguardodestroAvatar;
+
+
     public bool IsGuideActive()
     {
         return _isGuideActive;
@@ -144,7 +148,7 @@ public class TasksManager : MonoBehaviour
             sessionType = "Free";
 
         // Save the current session infromation on a .json file
-        SimulationSaveData simulationData = new SimulationSaveData(sessionType, DateTime.Now.ToString(CultureInfo.InstalledUICulture), _currentUsername, _time.GetTimeInString(), tasksTime, formattedAverageTime, _puncturesCount, _positionPrecision, _inclinationPrecision, _score, resultsQuestionnaire);
+        SimulationSaveData simulationData = new SimulationSaveData(sessionType, DateTime.Now.ToString(CultureInfo.InstalledUICulture), _currentUsername, _time.GetTimeInString(), tasksTime, formattedAverageTime, _puncturesCount, _positionPrecision, _inclinationPrecision, _score, resultsQuestionnaire + " Suagrdo laterale destro=" + _sguardodestroAvatar.timeLookAvatar + " Suagrdo lateralesinistro=" + _sguardosinistroAvatar.timeLookAvatar);
         SavingSystem.Save(_currentUsername, sessionType, simulationData);
 
         _chatbot.SaveInfoChatbot();
