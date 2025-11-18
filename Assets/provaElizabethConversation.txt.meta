@@ -1,7 +1,13 @@
 fileFormatVersion: 2
-guid: 8e1b5770e7ded5a44a480ef18dabd5b4
+<<<<<<<< Updated upstream:Assets/provaElizabethConversation.txt.meta
+guid: 585203c8476b36345809c5f539695f02
 TextScriptImporter:
+========
+guid: 4caea5e6f26394c4ca989c6de1024c39
+NativeFormatImporter:
+>>>>>>>> Stashed changes:Assets/Resources/SkinRenderTexture.renderTexture.meta
   externalObjects: {}
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

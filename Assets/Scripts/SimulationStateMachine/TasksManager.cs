@@ -254,7 +254,28 @@ public class TasksManager : MonoBehaviour
     {
         _audioMgr.ToggleSounds();
     }
+    //#########################################################################
+    [Header("Skin Tone Panel")]
+    public GameObject GO_SkinTonePanel = null;
+    public GameObject patientBody = null;
+    public GameObject skinToneManager = null;
 
+    public void ToggleSkinTonePanel(bool state)
+    {
+        // Trigger Slide In Animation for Skin Tone Panel
+        GO_SkinTonePanel.GetComponent<Animator>().SetTrigger((state) ? "SlideIn" : "SlideOut");
+    }
+    public void SetTone(int index)
+    {
+        // Adjust the skin tone index
+        if (patientBody != null)
+            {
+            // SkinToneToggle.SetSkinTone(index, patientBody);
+            skinToneManager.GetComponent<SkinToneToggle>().SetSkinTone(index, patientBody);
+             }
+
+    //#####################################################################################
+    }
     public void UpdateSoundsVolume(float value)
     {
         _audioMgr.UpdateSoundsVolume(value);
