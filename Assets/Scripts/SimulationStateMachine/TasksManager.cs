@@ -260,11 +260,11 @@ public class TasksManager : MonoBehaviour
     public GameObject patientBody = null;
     public GameObject skinToneManager = null;
 
-    public void ToggleSkinTonePanel(bool state)
+    /*public void ToggleSkinTonePanel(bool state)
     {
         // Trigger Slide In Animation for Skin Tone Panel
         GO_SkinTonePanel.GetComponent<Animator>().SetTrigger((state) ? "SlideIn" : "SlideOut");
-    }
+    }*/
     public void SetTone(int index)
     {
         // Adjust the skin tone index
